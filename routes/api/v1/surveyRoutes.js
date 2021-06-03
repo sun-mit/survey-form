@@ -10,13 +10,13 @@ const surveyController = require("../../../Controllers/v1/surveyController");
 router.get("/", surveyController.getAnswers);
 
 /*
-    @route   POST api/v1/surveys/:id
+    @route   GET api/v1/surveys/:id
     @access  Private
 */
 router.get("/:id", surveyController.getAnswer);
 
 /*
-    @route   GET api/v1/surveys
+    @route   POST api/v1/surveys
     @access  Public
 */
 router.post("/", surveyController.submitAnswers);

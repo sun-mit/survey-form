@@ -2,6 +2,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const SurveySchema = new Schema({
+  uName: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
   hasACar: {
     type: Boolean,
     required: true,
@@ -13,7 +21,7 @@ const SurveySchema = new Schema({
     type: String,
   },
   paymentMethod: {
-    type: String,
+    type: Object,
   },
   boughtPlace: {
     type: String,
